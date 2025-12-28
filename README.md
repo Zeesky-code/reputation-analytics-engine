@@ -47,4 +47,15 @@ This project includes a `Dockerfile` and `entrypoint.sh` that automatically gene
 1.  Connect your GitHub repository to Render.
 2.  Select **"Web Service"**.
 3.  Render will auto-detect the Docker environment.
-4.  Click **Deploy**.
+**To Deploy on Google Cloud (Cloud Run):**
+1.  **Install Google Cloud SDK** (`gcloud`).
+2.  **Initialize**: `gcloud init`
+3.  **Deploy from Source** (Easiest):
+    ```bash
+    gcloud run deploy reputation-analytics --source .
+    ```
+4.  **Alternatively, using Cloud Build**:
+    ```bash
+    gcloud builds submit --config cloudbuild.yaml .
+    ```
+
