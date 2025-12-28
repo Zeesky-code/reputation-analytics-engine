@@ -39,3 +39,12 @@ We help SMEs understand their online reputation not just by "star rating" but by
 -   `/api/business/{id}/deltas`: Activity vs previous 30 days.
 -   `/api/geo/overview`: Geographic sentiment data.
 -   `/api/geo/insight`: Automated spatial insights.
+
+## Deployment (Ready for Render/Railway)
+This project includes a `Dockerfile` and `entrypoint.sh` that automatically generates synthetic data on startup if the database is missing.
+
+**To Deploy on Render:**
+1.  Connect your GitHub repository to Render.
+2.  Select **"Web Service"**.
+3.  Render will auto-detect the Docker environment.
+4.  Click **Deploy**.
